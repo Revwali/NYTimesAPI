@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class News {
-	private Results[] results;
+	//private Results[] results;
 	private String title;
 	private String section;
 	public String getTitle() {
@@ -35,13 +35,13 @@ public class News {
 	}
 	public News() {
 		super();
-	}
+/*	}
 	public Results[] getResults() {
 		return results;
 	}
 	public void setResults(Results[] results) {
 		this.results = results;
-	}
+	}*/
 	
 	
 	
@@ -58,6 +58,6 @@ public class News {
 	 * public void setResults(Results[] results) { this.results = results; }
 	 * 
 	 */
-	
+	}
 	
 }
