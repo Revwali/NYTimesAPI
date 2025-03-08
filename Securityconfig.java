@@ -13,26 +13,27 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class Securityconfig {
-	
-	@Autowired
-	private CustomAuthentication auth;
-	@SuppressWarnings("deprecation")
-	@Bean
-	public InMemoryUserDetailsManager getUserDetailsManager() {
-		UserDetails user= User.withDefaultPasswordEncoder().username("test").password("test")
-				.roles("admin").build();
-		return new InMemoryUserDetailsManager(user);
-	}
-	    @Bean
-	    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-	        http
-	            .authorizeHttpRequests((authz) -> authz
-	                .requestMatchers("/g").authenticated()
-	            ).formLogin().and()
-	            .httpBasic().authenticationEntryPoint(auth);
-	        return http.build();
-	    }
 
-	
-	
+    @Autowired
+    private CustomAuthentication auth;
+
+    @SuppressWarnings("deprecation")
+    @Bean
+    public InMemoryUserDetailsManager getUserDetailsManager() {
+        UserDetails user = User.withDefaultPasswordEncoder().username("test").password("test")
+                .roles("admin").build();
+        return new InMemoryUserDetailsManager(user);
+    }
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http
+                .authorizeHttpRequests((authz) -> authz
+                        .requestMatchers("/g").authenticated()
+                ).formLogin().and()
+                .httpBasic().authenticationEntryPoint(auth);
+        return http.build();
+    }
+
+
 }

@@ -21,21 +21,22 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringBootTest
 //@ExtendWith(SpringRunner.class)
 class DemoApplicationTests {
-private MockMvc mockMvc;
+    private MockMvc mockMvc;
 
-@Autowired
-WebApplicationContext context;
+    @Autowired
+    WebApplicationContext context;
 
-@BeforeEach
-public void setup() {
-	mockMvc=MockMvcBuilders.webAppContextSetup(context).build();
-}
-	@Test
-	void contextLoads() throws Exception {
-		mockMvc.perform(get("/g")).andDo(print())
-		.andExpect(status().isOk())
-		.andExpect(MockMvcResultMatchers.jsonPath("$.results.[0].title").exists())
-	    .andExpect(MockMvcResultMatchers.jsonPath("$.section").exists());
-	}
+    @BeforeEach
+    public void setup() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
+    }
+
+    @Test
+    void contextLoads() throws Exception {
+        mockMvc.perform(get("/g")).andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.results.[0].title").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("$.section").exists());
+    }
 
 }
