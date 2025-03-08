@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.example.NYTimesAPI.DTO.News;
+import com.example.NYTimesAPI.service.NYTimesService;
 import org.apache.tomcat.util.json.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,6 +42,7 @@ public class Controller {
         news.setTitle(res.get("results").get(0).get("title"));
         return news;
         */
+        return new News();
 
 
     }

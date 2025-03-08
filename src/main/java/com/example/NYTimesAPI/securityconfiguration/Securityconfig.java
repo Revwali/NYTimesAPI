@@ -1,5 +1,6 @@
 package com.example.NYTimesAPI.securityconfiguration;
 
+import com.example.NYTimesAPI.customauthenticationentrypoint.CustomAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
