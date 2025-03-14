@@ -33,7 +33,8 @@ public class Securityconfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
       return http
               .authorizeHttpRequests().requestMatchers("/NYTimes/topStories/**")
-              .authenticated().and().httpBasic().and().formLogin().and().build();
+              .authenticated().and().httpBasic().authenticationEntryPoint(auth)
+              .and().formLogin().and().build();
 
     }
 
