@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.example.NYTimesAPI.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 13.53 s <<< FAILURE! -- in com.example.NYTimesAPI.DemoApplicationTests
+com.example.NYTimesAPI.DemoApplicationTests.contextLoads -- Time elapsed: 5.754 s <<< ERROR!
+com.jayway.jsonpath.InvalidPathException: Illegal character at position 1 expected '.' or '['
+	at com.jayway.jsonpath.internal.path.PathCompiler.fail(PathCompiler.java:642)
+	at com.jayway.jsonpath.internal.path.PathCompiler.readContextToken(PathCompiler.java:119)
+	at com.jayway.jsonpath.internal.path.PathCompiler.compile(PathCompiler.java:58)
+	at com.jayway.jsonpath.internal.path.PathCompiler.compile(PathCompiler.java:75)
+	at com.jayway.jsonpath.JsonPath.<init>(JsonPath.java:97)
+	at com.jayway.jsonpath.JsonPath.compile(JsonPath.java:515)
+	at org.springframework.test.util.JsonPathExpectationsHelper.<init>(JsonPathExpectationsHelper.java:61)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.<init>(JsonPathResultMatchers.java:63)
+	at org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath(MockMvcResultMatchers.java:197)
+	at com.example.NYTimesAPI.DemoApplicationTests.contextLoads(DemoApplicationTests.java:33)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

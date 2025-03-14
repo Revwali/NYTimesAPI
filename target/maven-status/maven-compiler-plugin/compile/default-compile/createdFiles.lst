@@ -1,0 +1,10 @@
+com\example\NYTimesAPI\service\NYTimesService.class
+com\example\NYTimesAPI\customauthenticationentrypoint\CustomAuthentication.class
+com\example\NYTimesAPI\customjsonconverterimpl\JsonToNewsConverter.class
+com\example\NYTimesAPI\DTO\Results.class
+com\example\NYTimesAPI\securityconfiguration\Securityconfig.class
+com\example\NYTimesAPI\DemoApplication.class
+com\example\NYTimesAPI\BeanConfiguration\BeanConfiguration.class
+com\example\NYTimesAPI\DTO\News.class
+com\example\NYTimesAPI\controller\Controller.class
+com\example\NYTimesAPI\customJsonconverterinterface\CustomJsonConverter.class
