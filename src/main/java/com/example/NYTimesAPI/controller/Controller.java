@@ -1,5 +1,10 @@
 package com.example.NYTimesAPI.controller;
 
+
+import java.util.ArrayList;
+
+
+
 import com.example.NYTimesAPI.DTO.News;
 import com.example.NYTimesAPI.service.NYTimesService;
 import org.apache.tomcat.util.json.ParseException;
@@ -27,8 +32,11 @@ public class Controller {
     @GetMapping("/all")
     public ResponseEntity<List<News>> getAllResults(@PathVariable(required = false, value = "topic") String topic) throws JsonMappingException, JsonProcessingException, ParseException {
 
+
     return ResponseEntity.ok(nyTimesService.getResultsFromNYTimes(topic));
     }
+
+
 
 
 }
