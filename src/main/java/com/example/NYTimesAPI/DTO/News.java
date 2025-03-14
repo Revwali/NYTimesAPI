@@ -4,12 +4,26 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/*
+needs to be upldated to match json from nytimes
+ */
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class News {
     //private Results[] results;
     private String title;
     private String section;
+    private String url;
+
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 
     public String getTitle() {
         return title;
@@ -27,37 +41,15 @@ public class News {
         this.section = section;
     }
 
-    public News(String title, String section) {
-        super();
+    public News(String title, String section, String url) {
         this.title = title;
         this.section = section;
+        this.url = url;
     }
 
     public News() {
         super();
-/*	}
-	public Results[] getResults() {
-		return results;
-	}
-	public void setResults(Results[] results) {
-		this.results = results;
-	}*/
 
-
-
-
-        /*
-         * private Results[] results;
-         *
-         * public News(Results[] results) { super(); this.results = results; }
-         *
-         * public News() { super(); }
-         *
-         * public Results[] getResults() { return results; }
-         *
-         * public void setResults(Results[] results) { this.results = results; }
-         *
-         */
     }
 
 }

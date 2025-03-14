@@ -1,41 +1,26 @@
 package com.example.NYTimesAPI.DTO;
 
-import org.springframework.stereotype.Component;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Component
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Results {
+    private String section;
+    private List<News> newsList;
 
-    private String title;
-    private String secton;
-
-    public String getTitle() {
-        return title;
+    public List<News> getNewsList() {
+        return newsList;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getSecton() {
-        return secton;
-    }
-
-    public void setSecton(String secton) {
-        this.secton = secton;
-    }
-
-    public Results(String title, String secton) {
-        super();
-        this.title = title;
-        this.secton = secton;
+    public void setNewsList(List<News> newsList) {
+        this.newsList = newsList;
     }
 
     public Results() {
-        super();
     }
 
-
+    public Results(List<News> newsList) {
+        this.newsList = newsList;
+    }
 }
