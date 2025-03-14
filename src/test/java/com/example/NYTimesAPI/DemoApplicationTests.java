@@ -30,8 +30,8 @@ class DemoApplicationTests {
     void contextLoads() throws Exception {
         mockMvc.perform(get("/NYTimes/topStories/all")).andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.results.[0].title").exists())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.results.[0].section").exists());
+                .andExpect(MockMvcResultMatchers.jsonPath("[0].title").exists())
+                .andExpect(MockMvcResultMatchers.jsonPath("[0].section").exists());
     }
 
 }
